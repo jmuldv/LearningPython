@@ -791,11 +791,28 @@ counter = 0
 number = int(input("Please type in a number: "))
 
 while counter <= number:
-    if number % 2 == 0:
-        counter += 2
+    counter += 2
+    num_before = counter - 1
+    if num_before > number:
+        counter = 0
+        break
+    elif counter > number:
+        print(num_before)
+    else:
         print(counter)
-        counter -= 1
-        print(counter)
+        print(num_before)
+
+print('\r')
+
+# Check if the number is positive
+if number < 1:
+    print("Please enter a positive number.")
+else:
+    # Generate a list of numbers from 1 to num
+    numbers = list(range(1, number + 1))
+
+    # Print the numbers on one line, separated by spaces
+    print(*numbers)
 
 
 # Taking turns
