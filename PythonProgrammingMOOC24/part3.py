@@ -894,14 +894,65 @@
 # o
 # n
 
-def first_character(text):
-    print(text[0])
+# def first_character(text):
+#     print(text[0])
+
+# if __name__ == "__main__":
+#     first_character('python')
+#     first_character('yellow')
+#     first_character('tomorrow')
+#     first_character('heliotrope')
+#     first_character('octothorpe')
+#     first_character('night')
+
+# Mean
+# Please write a function named mean, which takes three integer arguments.
+# The function should print out the arithmetic mean of the three arguments.
+
+# mean(5, 3, 1)
+# mean(10, 1, 1)
+
+# Sample output
+# 3.0
+# 4.0
+
+# def mean(first, second, third):
+#     result = (first + second + third) / 3
+#     print(result)
+
+# mean(5, 3, 1)
+# mean(10, 1, 1)
 
 
-if __name__ == "__main__":
-    first_character('python')
-    first_character('yellow')
-    first_character('tomorrow')
-    first_character('heliotrope')
-    first_character('octothorpe')
-    first_character('night')
+# Print many times
+
+# Please write a function named print_many_times(text, times), which
+# takes a string and an integer as arguments. The integer argument specifies
+# how many times the string argument should be printed out:
+
+# print_many_times("hi", 5)
+
+# print()
+
+# text = "All Pythons, except one, grow up"
+# times = 3
+# print_many_times(text, times)
+
+# Sample output
+# hi
+# hi
+# hi
+# hi
+# hi
+
+# All Pythons, except one, grow up.
+# All Pythons, except one, grow up.
+# All Pythons, except one, grow up.
+
+def print_many_times(text, times):
+    print(f"{text}\n" * times)
+
+
+text = input("Enter text: ")
+times = int(input("Enter an integer: "))
+print_many_times(text, times)
