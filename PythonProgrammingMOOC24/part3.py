@@ -787,32 +787,32 @@
 
 # 1 2 3 4 5 6 7 8
 
-counter = 0
-number = int(input("Please type in a number: "))
+# counter = 0
+# number = int(input("Please type in a number: "))
 
-while counter <= number:
-    counter += 2
-    num_before = counter - 1
-    if num_before > number:
-        counter = 0
-        break
-    elif counter > number:
-        print(num_before)
-    else:
-        print(counter)
-        print(num_before)
+# while counter <= number:
+#     counter += 2
+#     num_before = counter - 1
+#     if num_before > number:
+#         counter = 0
+#         break
+#     elif counter > number:
+#         print(num_before)
+#     else:
+#         print(counter)
+#         print(num_before)
 
-print('\r')
+# print('\r')
 
-# Check if the number is positive
-if number < 1:
-    print("Please enter a positive number.")
-else:
-    # Generate a list of numbers from 1 to num
-    numbers = list(range(1, number + 1))
+# # Check if the number is positive
+# if number < 1:
+#     print("Please enter a positive number.")
+# else:
+#     # Generate a list of numbers from 1 to num
+#     numbers = list(range(1, number + 1))
 
-    # Print the numbers on one line, separated by spaces
-    print(*numbers)
+#     # Print the numbers on one line, separated by spaces
+#     print(*numbers)
 
 
 # Taking turns
@@ -838,4 +838,14 @@ else:
 # 3
 # 4
 
-# number = int(input("Please type in a number: "))
+start = 1
+number = int(input("Please type in a number greater than 1: "))
+
+while start < number:
+    print(start)
+    print(number)
+    start += 1
+    number -= 1
+
+if start == number:
+    print(start)
