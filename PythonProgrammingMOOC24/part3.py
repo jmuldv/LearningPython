@@ -949,10 +949,115 @@
 # All Pythons, except one, grow up.
 # All Pythons, except one, grow up.
 
-def print_many_times(text, times):
-    print(f"{text}\n" * times)
+# def print_many_times(text, times):
+#     print(f"{text}\n" * times)
+
+
+# text = input("Enter text: ")
+# times = int(input("Enter an integer: "))
+# print_many_times(text, times)
+
+
+# A square of hashes
+
+# Please write a function named hash_square(length), which takes an
+# integer argument. The function prints out a square of hash characters,
+# and the argument specifies the length of the side of the square.
+
+# hash_square(3)
+# print()
+# hash_square(5)
+
+# Sample output
+# ###
+# ###
+# ###
+
+# #####
+# #####
+# #####
+# #####
+# #####
+
+# def hash_square(length):
+#     row = "#" * length
+#     print(f"{row}\n" * length)
+
+
+# length = int(input("Enter an integer: "))
+# hash_square(length)
+
+
+# Chessboard
+
+# Please write a function named chessboard, which prints out a
+# chessboard made out of ones and zeroes. The function takes an
+# integer argument, which specifies the length of the side of the
+# board. See the examples below for details:
+
+# chessboard(3)
+# print()
+# chessboard(6)
+
+# Sample output
+# 101
+# 010
+# 101
+
+# 101010
+# 010101
+# 101010
+# 010101
+# 101010
+# 010101
+
+# def chessboard(length):
+#     for row in range(length):
+#         line = ""
+#         for col in range(length):
+#             # Start first row with 1 by adding 1 before taking modulo 2
+#             value = (row + col + 1) % 2
+#             line += str(value)
+#         print(line)
+
+
+# length = int(input("Enter an integer: "))
+# chessboard(length)
+
+
+# A word squared
+
+# Please write a function named squared, which takes a string argument and an
+# integer argument, and prints out a square of characters as specified by the examples below.
+
+# squared("ab", 3)
+# print()
+# squared("aybabtu", 5)
+# Sample output
+# aba
+# bab
+# aba
+
+# aybab
+# tuayb
+# abtua
+# ybabt
+# uayba
+
+def squared(text, n):
+    square = n ** 2
+    textlen = len(text)
+    if square % textlen == 0:
+        str = text * int(square / textlen)
+        # print(str)
+    else:
+        str = (text * int(square // textlen)) + text[0:(square % textlen)]
+        # print(str)
+
+    for i in range(0, len(str), n):
+        print(str[i:i+n])
 
 
 text = input("Enter text: ")
-times = int(input("Enter an integer: "))
-print_many_times(text, times)
+n = int(input("Enter a number: "))
+squared(text, n)
