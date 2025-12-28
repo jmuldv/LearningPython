@@ -148,13 +148,65 @@
 # print(names)
 
 
-numbers = []
+# numbers = []
 
-while True:
-    num = int(input("Give a number, 0 stops: "))
-    if num == 0:
-        break
+# while True:
+#     num = int(input("Give a number, 0 stops: "))
+#     if num == 0:
+#         break
 
-    numbers.append(num)
+#     numbers.append(num)
 
-print(numbers)
+# print(numbers)
+
+# Misc notes:
+# characters in a string are indexed the same way a list is
+# len() function works the same way on a list
+# list.append(item) appends at the end of the list
+# list.insert(index, item) inserts into given index
+# adding/inserting an item before the last value pushes all values after it one
+# step forward in the index
+
+# results = [1.5, 5.25, 3.75, 1.0]
+
+# results[0] = 10.5
+# print(results)  # [10.5, 5.25, 3.75, 1.0]
+
+# results.insert(0, 10.25)
+# print(results)  # [10.25, 1.5, 5.25, 3.75, 1.0]
+
+# name = "peter"
+# name[0] = "P"
+# print(name)  # Traceback error...can't do this with strings
+
+# in order to change the string above, you'd have to convert it to a list
+# name = "peter"
+
+# plist = list(name)
+# # name = "P" + name[1:]  # ...or...
+# # name = name[0].upper() + name[1:]
+# # print(name)
+# plist[0] = "P"
+# res = ''.join(plist)
+# print(res)
+
+# names = ["Peter", "Paul", "Mary", "Anne", "John"]
+
+# while len(names) > 0:
+#     names.pop(0)
+#     print(names)
+
+def remove_all_items(l: list, item: int):
+    while item in l:
+        l.remove(item)
+
+
+numbers = [10, 20, 30, 40, 50, 60, 70, 30, 30]
+# numbers.remove(30)
+# print(numbers)  # [10, 20, 40, 50, 60, 70, 30, 30]
+
+# numbers.remove(25)
+# print(numbers)  # Traceback error because the value needs to exist in the string
+
+remove_all_items(numbers, 30)
+print(numbers)  # [10, 20, 40, 50, 60, 70]
