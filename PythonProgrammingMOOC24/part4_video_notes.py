@@ -196,17 +196,93 @@
 #     names.pop(0)
 #     print(names)
 
-def remove_all_items(l: list, item: int):
-    while item in l:
-        l.remove(item)
+# def remove_all_items(l: list, item: int):
+#     while item in l:
+#         l.remove(item)
 
 
-numbers = [10, 20, 30, 40, 50, 60, 70, 30, 30]
-# numbers.remove(30)
-# print(numbers)  # [10, 20, 40, 50, 60, 70, 30, 30]
+# numbers = [10, 20, 30, 40, 50, 60, 70, 30, 30]
+# # numbers.remove(30)
+# # print(numbers)  # [10, 20, 40, 50, 60, 70, 30, 30]
 
-# numbers.remove(25)
-# print(numbers)  # Traceback error because the value needs to exist in the string
+# # numbers.remove(25)
+# # print(numbers)  # Traceback error because the value needs to exist in the string
 
-remove_all_items(numbers, 30)
-print(numbers)  # [10, 20, 40, 50, 60, 70]
+# remove_all_items(numbers, 30)
+# print(numbers)  # [10, 20, 40, 50, 60, 70]
+
+# numbers = [1, 5, 2, 4, 3, 6, 5, 4, 7, 5, 10, -1]
+# # numbers.sort()
+# # print(numbers)  # [-1, 1, 2, 3, 4, 4, 5, 5, 5, 6, 7, 10]
+# # print(reversed(numbers))  # <list_reverseiterator object at 0x000002266726F310>
+
+# # numbers.sort(reverse=True)
+# # print(numbers)  # [10, 7, 6, 5, 5, 5, 4, 4, 3, 2, 1, -1]
+
+# # numbers2 = sorted(numbers)
+# # print(numbers)  # [1, 5, 2, 4, 3, 6, 5, 4, 7, 5, 10, -1]
+# # print(numbers2)  # [-1, 1, 2, 3, 4, 4, 5, 5, 5, 6, 7, 10]
+
+# numbers2 = sorted(numbers, reverse=True)
+# print(numbers2)  # [10, 7, 6, 5, 5, 5, 4, 4, 3, 2, 1, -1]
+# sort() method modifies the list in place and returns None,
+# while the sorted() built-in function creates a new sorted list
+# and leaves the original iterable unchanged
+
+# names = ["Peter", "Paul", "Mary", "Anne", "John"]
+# print(sorted(names))  # ['Anne', 'John', 'Mary', 'Paul', 'Peter']
+
+# lower case characters come after upper case
+# names = ["Peter", "Paul", "Mary", "anne", "John"]
+# print(sorted(names))  # ['John', 'Mary', 'Paul', 'Peter', 'anne']
+
+# names = ["Peter", "Paul", "Mary", "Anne", "John"]
+
+# # index = 0
+# # while index < len(names):
+# #     print(names[index])
+# #     index += 1
+
+# for name in names:
+#     print(name)
+
+# name = "Peter Python"
+
+# for char in name:
+#     print(char)
+
+# sentence = "A small dog was flying in the space."
+# vowels = "aeiou"
+# num = 0
+
+# for char in sentence:
+#     if char in vowels:
+#         num += 1
+
+# print(f"There are {num} vowels in the string.")
+
+
+# numbers = [1, 2, 3, 4, 5, 6, 7, 6, -5, 6, 7, 8, 9, 10]
+# for number in numbers:
+#     if number < 0:
+#         break
+
+#     print(number)
+
+
+# for i in range(5):
+#     print(i)
+
+# calculate the sum of 1 + 2 + 3 +... + 99 + 100
+# result = 0
+
+# for num in range(1, 100):
+#     result += num
+
+# print(result)
+
+# for i in range(1, 10):
+#     print(i)
+
+# print(range(1, 100))  # this is not a list
+# print(list(range(1, 100)))  # this is a list
