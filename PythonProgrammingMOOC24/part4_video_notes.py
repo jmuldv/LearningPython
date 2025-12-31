@@ -54,14 +54,282 @@
 # s = truncate_string(truncate_string(s))
 # print(s)
 
-def add_one(number):
-    return number + 1
+# def add_one(number):
+#     return number + 1
 
 
-def sub_one(number):
-    return number - 1
+# def sub_one(number):
+#     return number - 1
 
 
-# num = add_one(add_one(add_one(1)))   #4
-num = add_one(sub_one(5))
-print(num)
+# # num = add_one(add_one(add_one(1)))   #4
+# num = add_one(sub_one(5))
+# print(num)
+
+# Variables have a type but we don't need to define the type.
+# name = "Peter"
+# age = 54
+# height = 175.5
+
+# def join(first: int, second: int):  # Added type hints
+#     return first + second
+
+
+# print(join(10, 20))  # 30
+# print(join("abc", "def"))  # abc def
+# print(join("abc", 10))    # throws an error.
+# result = join(20, 30)
+
+
+# def factorial(n: int):
+#     print(n)
+
+# factorial(10.5)
+# factorial(True)
+
+# def join(first: int, second: int) -> float: # The return type isn't needed but it can be expressly stated.
+#     return float(first + second)
+
+# join()
+
+# def do_something(n: int):
+#     print("Hello")
+#     return n * 2        # Return is like a break on a function.
+#     print("Hello again")
+
+# do_something(4)
+
+
+# def get_larger(number1: int, number2: int):
+#     if number1 > number2:
+#         return number1
+#     else:
+#         print("The second number is larger!")
+
+
+# n1 = 10
+# n2 = 30
+# print(get_larger(n1, n2))
+# The second number is larger!
+# None     # None is output because no value was returned.
+# In the above example, it would be best to have a return statement in both if and else.
+
+
+# This is another way the above could be written but using else is a bit more clear..
+# def get_larger(number1: int, number2: int):
+#     if number1 > number2:
+#         return number1
+
+#     return number2
+
+# n1 = 10
+# n2 = 60
+# print(get_larger(n1, n2))
+
+
+# name1 = "Peter"
+# name2 = "Paul"
+# name3 = "Mary"
+# name4 = "Anne"
+# # If I wanted to add a ! at the end of each, I'd need to write each out like this...
+# name1 += "!"   # ...and so on.
+# # Instead of the above, you'd want a data structure
+
+# names = ["Peter", "Paul", "Mary", "Anne"]
+# results = [1, 3, 4, 2, 4, 5, 4, 4, 56, 7, 3, 2, -1]
+# print(names)  # Prints entire list
+# print(results)  # Prints entire list
+# print(names[0])  # Prints Peter
+# print(names[-1])  # Prints Anne
+# print(len(names))  # Prints 4
+# # Difference between lists and strings is lists are mutable (can append)
+# names.append("John")
+# names.append("Jane")
+# print(names)
+
+
+# numbers = []
+
+# while True:
+#     num = int(input("Give a number, 0 stops: "))
+#     if num == 0:
+#         break
+
+#     numbers.append(num)
+
+# print(numbers)
+
+# Misc notes:
+# characters in a string are indexed the same way a list is
+# len() function works the same way on a list
+# list.append(item) appends at the end of the list
+# list.insert(index, item) inserts into given index
+# adding/inserting an item before the last value pushes all values after it one
+# step forward in the index
+
+# results = [1.5, 5.25, 3.75, 1.0]
+
+# results[0] = 10.5
+# print(results)  # [10.5, 5.25, 3.75, 1.0]
+
+# results.insert(0, 10.25)
+# print(results)  # [10.25, 1.5, 5.25, 3.75, 1.0]
+
+# name = "peter"
+# name[0] = "P"
+# print(name)  # Traceback error...can't do this with strings
+
+# in order to change the string above, you'd have to convert it to a list
+# name = "peter"
+
+# plist = list(name)
+# # name = "P" + name[1:]  # ...or...
+# # name = name[0].upper() + name[1:]
+# # print(name)
+# plist[0] = "P"
+# res = ''.join(plist)
+# print(res)
+
+# names = ["Peter", "Paul", "Mary", "Anne", "John"]
+
+# while len(names) > 0:
+#     names.pop(0)
+#     print(names)
+
+# def remove_all_items(l: list, item: int):
+#     while item in l:
+#         l.remove(item)
+
+
+# numbers = [10, 20, 30, 40, 50, 60, 70, 30, 30]
+# # numbers.remove(30)
+# # print(numbers)  # [10, 20, 40, 50, 60, 70, 30, 30]
+
+# # numbers.remove(25)
+# # print(numbers)  # Traceback error because the value needs to exist in the string
+
+# remove_all_items(numbers, 30)
+# print(numbers)  # [10, 20, 40, 50, 60, 70]
+
+# numbers = [1, 5, 2, 4, 3, 6, 5, 4, 7, 5, 10, -1]
+# # numbers.sort()
+# # print(numbers)  # [-1, 1, 2, 3, 4, 4, 5, 5, 5, 6, 7, 10]
+# # print(reversed(numbers))  # <list_reverseiterator object at 0x000002266726F310>
+
+# # numbers.sort(reverse=True)
+# # print(numbers)  # [10, 7, 6, 5, 5, 5, 4, 4, 3, 2, 1, -1]
+
+# # numbers2 = sorted(numbers)
+# # print(numbers)  # [1, 5, 2, 4, 3, 6, 5, 4, 7, 5, 10, -1]
+# # print(numbers2)  # [-1, 1, 2, 3, 4, 4, 5, 5, 5, 6, 7, 10]
+
+# numbers2 = sorted(numbers, reverse=True)
+# print(numbers2)  # [10, 7, 6, 5, 5, 5, 4, 4, 3, 2, 1, -1]
+# sort() method modifies the list in place and returns None,
+# while the sorted() built-in function creates a new sorted list
+# and leaves the original iterable unchanged
+
+# names = ["Peter", "Paul", "Mary", "Anne", "John"]
+# print(sorted(names))  # ['Anne', 'John', 'Mary', 'Paul', 'Peter']
+
+# lower case characters come after upper case
+# names = ["Peter", "Paul", "Mary", "anne", "John"]
+# print(sorted(names))  # ['John', 'Mary', 'Paul', 'Peter', 'anne']
+
+# names = ["Peter", "Paul", "Mary", "Anne", "John"]
+
+# # index = 0
+# # while index < len(names):
+# #     print(names[index])
+# #     index += 1
+
+# for name in names:
+#     print(name)
+
+# name = "Peter Python"
+
+# for char in name:
+#     print(char)
+
+# sentence = "A small dog was flying in the space."
+# vowels = "aeiou"
+# num = 0
+
+# for char in sentence:
+#     if char in vowels:
+#         num += 1
+
+# print(f"There are {num} vowels in the string.")
+
+
+# numbers = [1, 2, 3, 4, 5, 6, 7, 6, -5, 6, 7, 8, 9, 10]
+# for number in numbers:
+#     if number < 0:
+#         break
+
+#     print(number)
+
+
+# for i in range(5):
+#     print(i)
+
+# calculate the sum of 1 + 2 + 3 +... + 99 + 100
+# result = 0
+
+# for num in range(1, 100):
+#     result += num
+
+# print(result)
+
+# for i in range(1, 10):
+#     print(i)
+
+# print(range(1, 100))  # this is not a list
+# print(list(range(1, 100)))  # this is a list
+
+# List example of sorting then reversing
+# numbers = [1, 5, 4, 2, 3, -1, -3, 2, 6, 8, 10, -10, -20]
+
+# numbers2 = sorted(numbers)
+# numbers2 = numbers2[::-1]
+
+# print(numbers2)
+
+# String example of reversing
+# name = "Jane Doe"
+# print(name[::-1])
+
+# Immutability
+# my_list = [1, 2, 3]
+# my_list[0] = 10  # [10, 2, 3]
+# print(my_list)
+
+# Can't change a string like that but you can concatenate
+# my_string = "Hey"
+# my_string = my_string + "!"
+# print(my_string)  # Hey!
+
+
+# Counts the number of time of the value in parens
+# values = [1, 2, 3, 4, 5, 2, 67, 2, 7, 8, 5, 2, 2]
+# print(values.count(2))  # 5
+# print(values.count(10))  # 0
+
+# sentence = "A dog traveling through time and space"
+# words = sentence.count(" ") + 1
+# print(words) # 7
+
+# names = ["John", "Jane", "Paul", None, None, "Mary"]
+# print(names)  # ['John', 'Jane', 'Paul', None, None, 'Mary']
+
+# for name in names:
+#     if name:  # Not possible to get the length of None so have to add this if
+#         print(len(name))
+
+name = "Peter Johnson"
+name = name.replace("Peter", "Paul")
+print(name)  # Paul Johnson
+
+sentence = "a dog is flying in space"
+sentence = sentence.replace(" ", "")
+print(sentence)  # adogisflyinginspace
