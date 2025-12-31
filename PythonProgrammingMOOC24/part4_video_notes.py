@@ -286,3 +286,50 @@
 
 # print(range(1, 100))  # this is not a list
 # print(list(range(1, 100)))  # this is a list
+
+# List example of sorting then reversing
+# numbers = [1, 5, 4, 2, 3, -1, -3, 2, 6, 8, 10, -10, -20]
+
+# numbers2 = sorted(numbers)
+# numbers2 = numbers2[::-1]
+
+# print(numbers2)
+
+# String example of reversing
+# name = "Jane Doe"
+# print(name[::-1])
+
+# Immutability
+# my_list = [1, 2, 3]
+# my_list[0] = 10  # [10, 2, 3]
+# print(my_list)
+
+# Can't change a string like that but you can concatenate
+# my_string = "Hey"
+# my_string = my_string + "!"
+# print(my_string)  # Hey!
+
+
+# Counts the number of time of the value in parens
+# values = [1, 2, 3, 4, 5, 2, 67, 2, 7, 8, 5, 2, 2]
+# print(values.count(2))  # 5
+# print(values.count(10))  # 0
+
+# sentence = "A dog traveling through time and space"
+# words = sentence.count(" ") + 1
+# print(words) # 7
+
+# names = ["John", "Jane", "Paul", None, None, "Mary"]
+# print(names)  # ['John', 'Jane', 'Paul', None, None, 'Mary']
+
+# for name in names:
+#     if name:  # Not possible to get the length of None so have to add this if
+#         print(len(name))
+
+name = "Peter Johnson"
+name = name.replace("Peter", "Paul")
+print(name)  # Paul Johnson
+
+sentence = "a dog is flying in space"
+sentence = sentence.replace(" ", "")
+print(sentence)  # adogisflyinginspace
