@@ -116,3 +116,11 @@
 
 # ##########
 # ##########
+
+def box_of_hashes(num):
+    print(f"{'#' * (num)}")
+
+
+count = 1
+num = int(input("Enter a number to create a box of hashes: "))
+box_of_hashes(num)
